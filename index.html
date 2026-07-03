@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify-clone</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome -->
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -19,13 +19,15 @@
             </div>
             <ul list-style-type="circle" class="menu">
                 <li class="active">
-                    <i class="fa-solid fa-house"></i>
+                    <i class="fa-solid fa-house">
                      Home
+                    </i>
                 </li>
 
                 <li>
-                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-magnifying-glass">
                      Search
+                    </i>
                 </li>
 
                 <li>
@@ -41,5 +43,33 @@
                 </li>
             </ul>
         </aside>
+        <!-- main content-->
 
+        <main class="main">
+
+            <header>
+                <h1>Good Evening 👋</h1>
+                <div  class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input 
+                    type="text" placeholder="Search for Artists, Songs, or Podcasts">
+                    
+                </div>
+            </header>
+
+            <section>
+                <h2>Trending songs</h2>
+                <div class="cards">
+                    <div class="card">
+                        <img src="https://picsum.photos/200?2" alt="Trending Song">
+                        <h3>Enemy</h3>
+
+                        <p>Imagine Dragons</p>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
+</body>
+</html>

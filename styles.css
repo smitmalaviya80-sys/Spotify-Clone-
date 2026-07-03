@@ -1,0 +1,194 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif
+}
+
+body{
+    background-color:#f4f4f4;
+    color:#333;
+}
+
+.container{
+    width:80%;
+    margin:0 auto;
+    padding:20px;
+}
+
+/* side bar */
+.sidebar{
+    width: 240px;;
+    float:left;
+    background-color:#11364381;
+    padding: 25px;
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.212);
+}
+
+.logo{
+    color:#1DB954;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:40px;
+}
+
+.logo i{
+    margin-right: 10px;
+}
+
+.menu{
+    list-style: none;
+}
+
+.menu li{
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu li :hover{
+    background: #1DB954;
+}
+.menu li i{
+    margin-right: 12px;
+    
+}
+
+
+.active{
+    background: #1DB954;
+}
+
+/* main */
+
+.main{
+    flex: 1;
+
+    padding: 30px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search{
+    background: #f4f4f4;
+    width:300px;
+
+    border-radius:50px;
+
+    padding:12px 20px;
+
+    display:flex;
+
+    align-items:center;
+}
+
+.search input{
+    background-color: #11364381;
+    color: #f4f4f4;
+    
+    width:100%;
+
+    margin-left:10px;
+}
+
+.search i{
+    color: black;
+
+}
+
+h2{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* cards */
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(180px,1fr));
+    gap :25px;
+
+}
+
+.card{
+    background: #181818;
+    padding: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: translate(8px ,-8px);
+    background: #282828;
+    box-shadow: 0 10px 30px rgba(5, 239, 87, 0.92);
+}
+
+.card img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card h3{
+    margin-top:10px;
+
+}
+
+.card p{
+    color: #b3b3b3;
+    margin-top: 3px;    
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .sidebar{
+
+        width:70px;
+
+    }
+
+    .logo span{
+
+        display:none;
+
+    }
+
+    .menu li{
+
+        text-align:center;
+
+    }
+
+    .menu li i{
+
+        margin:0;
+
+    }
+
+    .menu li{
+
+        font-size:0;
+
+    }
+
+    .menu li i{
+
+        font-size:20px;
+
+    }
+
+    .search{
+
+        width:180px;
+
+    }
+
+}
