@@ -83,7 +83,7 @@ header{
     background: #f4f4f4;
     width:300px;
 
-    border-radius:50%;  
+    border-radius:20px;  
 
     padding:12px 20px;
 
@@ -99,8 +99,8 @@ header{
 ;
 }
 .search input{
-    background-color: #11364381;
-    color: #f4f4f4;
+    background-color: #fefefe81;
+    color: #383434;
     
     width:100%;
     border-radius: 5px;
