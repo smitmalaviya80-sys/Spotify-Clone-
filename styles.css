@@ -53,6 +53,7 @@ body{
 
 .menu li :hover{
     background: #1DB954;
+    padding-left: 25px;
 }
 .menu li i{
     margin-right: 12px;
@@ -89,8 +90,14 @@ header{
     display:flex;
 
     align-items:center;
+
+    transition: 0.3s;
 }
 
+.search:hover{
+    box-shadow:0 0 20px rgba(29,185,84,.5);
+;
+}
 .search input{
     background-color: #11364381;
     color: #f4f4f4;
@@ -123,7 +130,7 @@ h2{
 .card{
     background: #181818;
     padding: 18px;
-    border-radius: 12px;
+    border-radius: 14px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -134,13 +141,52 @@ h2{
     box-shadow: 0 10px 30px rgba(5, 239, 87, 0.92);
 }
 
+.cover{
+    position: relative;
+    margin-bottom: 10px;
+}
+
 .card img{
     width: 100%;
+    display: block;
     border-radius: 10px;
+}
+
+.card-play{
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: #1DB954;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.card:hover .card-play,
+.cover:hover .card-play{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card-play:hover{
+    transform: scale(1.06);
+    background: #1ed760;
 }
 
 .card h3{
     margin-top:10px;
+    color: #ede90f;
 
 }
 
@@ -204,7 +250,7 @@ h2{
     bottom: 0;
     width: 100%;
     height: 90px;
-    background-color: #181818;
+    background-color: #045162c3;
     border-top: 1px solid #333;
     display: flex;
     justify-content: space-between;
@@ -279,44 +325,39 @@ h2{
 }
 
 .buttons button{
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 18px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
 
-    background:none;
-
-    border:none;
-
-    color:white;
-
-    cursor:pointer;
-
-    font-size:18px;
-
+.buttons button:hover{
+    background: rgba(255, 255, 255, 0.12);
 }
 
 .play-btn{
-
-    width:45px;
-
-    height:45px;
-
-    border-radius:50%;
-
-    background:white !important;
-
-    color:black !important;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    transition:.3s;
-
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
 }
 
 .play-btn:hover{
 
-    transform:scale(1.1);
+    transform:rotate(15deg);
 
 }
 
@@ -401,5 +442,102 @@ h2{
         width:100%;
 
     }
+
+}
+
+/* CARD IMAGE */
+
+.cover{
+
+    position:relative;
+
+}
+
+.cover img{
+
+    width:100%;
+
+    border-radius:12px;
+
+}
+
+/* PLAY BUTTON */
+
+.card-play{
+
+    position:absolute;
+
+    right:15px;
+
+    bottom:15px;
+
+    width:50px;
+
+    height:50px;
+
+    border: 2px dotted green ;
+
+    border-radius:30%;
+
+    background:#1DB954;
+
+    color:white;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:.3s;
+
+    font-size:18px;
+
+}
+
+.card:hover .card-play{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.card-play:hover{
+
+    transform:rotate(45deg);
+
+}
+
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#1DB954;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#121212;
+
+}
+
+.music-player{
+
+    transition:.3s;
+
+}
+
+.music-player:hover{
+
+    box-shadow:0 -8px 25px rgba(29,185,84,.25);
 
 }
